@@ -195,6 +195,8 @@ var (
 		"-Werror=format-security",
 		"-nostdlibinc",
 
+		// Enable Hot Cold splitting optimization.
+		"-mllvm -hot-cold-split=true",
 	}
 
 	commonGlobalLldflags = []string{
