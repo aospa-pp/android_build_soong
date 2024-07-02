@@ -72,6 +72,8 @@ var (
 		"build/soong/linkerconfig":           Bp2BuildDefaultTrueRecursively,
 		"build/soong/scripts":                Bp2BuildDefaultTrueRecursively,
 
+		"vendor/aospa/signing/keys": Bp2BuildDefaultTrue,
+
 		"cts/common/device-side/nativetesthelper/jni": Bp2BuildDefaultTrueRecursively,
 
 		"dalvik/tools/dexdeps": Bp2BuildDefaultTrueRecursively,
@@ -402,6 +404,8 @@ var (
 		"build/make/tools":/* recursive = */ false,
 		"build/pesto":/* recursive = */ true,
 		"build/soong":/* recursive = */ true,
+
+		"vendor/aospa/signing/keys":/* recursive = */ false,
 
 		// external/bazelbuild-rules_android/... is needed by mixed builds, otherwise mixed builds analysis fails
 		// e.g. ERROR: Analysis of target '@soong_injection//mixed_builds:buildroot' failed
