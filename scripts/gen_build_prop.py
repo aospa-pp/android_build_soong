@@ -43,7 +43,10 @@ def get_build_keys(product_config):
   default_cert = product_config.get("DefaultAppCertificate", "")
   if default_cert == "" or default_cert == os.path.join(TEST_KEY_DIR, "testKey"):
     return "test-keys"
-  return "dev-keys"
+  # We sign inline with the vendor's release keys instead of
+  # re-signing the target files in a post-build step, so the
+  # build is already release-signed.
+  return "release-keys"
 
 def override_config(config):
   if "PRODUCT_BUILD_PROP_OVERRIDES" in config:
