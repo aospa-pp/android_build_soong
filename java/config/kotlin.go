@@ -50,7 +50,7 @@ func init() {
 		"-J--add-opens=java.base/sun.net.www.protocol.jar=ALL-UNNAMED",
 	}, " "))
 
-	pctx.StaticVariable("KotlincHeapSize", "8192M")
+	pctx.StaticVariable("KotlincHeapSize", "4096M")
 	pctx.StaticVariable("KotlincHeapFlags", "-J-Xmx${KotlincHeapSize}")
 
 	// These flags silence warnings seen when running kotlinc in OpenJDK9+
